@@ -16,20 +16,26 @@
     </style>
 </head>
 <body>
-    <button id = "btnCounter">+</button>
+    <input id="inputAmount" type = "text"></input>
+
+    <button id = "btnAddExpense">+</button>
     
 
     <script>
 
-        let counter = 0;
-        function counterIncrement(){
-            counter = counter + 1;
-            console.log(counter);
+        let totalExpense = 0;
+       function addExpenseToTotal(){
+           const inputElement = document.querySelector("#inputAmount");
+           const textAmount = inputElement.value;
+           console.log(textAmount);
 
-        }
-        const element = document.querySelector("#btnCounter");
+           const expense = parseInt(textAmount, 10);
+           totalExpense = totalExpense + expense;
+           console.log(totalExpense);
+       }
+        const element = document.querySelector("#btnAddExpense");
 
-        element.addEventListener("click", counterIncrement,false);
+        element.addEventListener("click", addExpenseToTotal,false);
       
         
     </script>

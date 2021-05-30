@@ -20,12 +20,18 @@
     
 
     <script>
-       
-        const element = document.querySelector("#btnCounter");
-      
+
         let counter = 0;
-        counter = counter + 1;
-       
+        function counterIncrement(){
+            counter = counter + 1;
+            console.log(counter);
+
+        }
+        const element = document.querySelector("#btnCounter");
+
+        element.addEventListener("click", counterIncrement,false);
+      
+        
     </script>
 
 </body>
